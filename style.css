@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Roboto:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito';
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: #5d0570;
+    background-image: linear-gradient(90deg, #4304a0 0%, #760478 100%);
+    
+    
+    }
+
+header nav {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #4304a0 0%, #760478 100%);
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.brand {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: whitesmoke;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: inline;
+}
+
+form input {
+    margin-top: 20px;
+
+    width: 90%;
+    background-color: rgb(251, 248, 245);
+    padding: 10px;
+    border: none;
+
+    outline: #5900de 2px solid;
+    font-size: 1.5rem;
+    display: inline;
+}
+
+form .searchBtn {
+    margin-top: 20px;
+    width: 22%;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(12, 12, 12);
+    border: none;
+    background-image: linear-gradient(90deg, #5900de 0%, #FC00FF 100%);
+
+}
+
+.searchBtn:hover {
+    background-image: linear-gradient(90deg, #FC00FF 0%, #5900de 100%);
+
+}
+
+@media screen and (max-width:600px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav form {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+}
+
+.recipe-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.recipe {
+    background-color: white;
+    color: black;
+    border-radius: 15px 50px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #36130e;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    max-width: 350px;
+
+}
+.recipe img{
+    height: 300px;
+}
+.recipe p{
+    font-size: 20px;
+    color: rgb(78, 78, 78);
+}
+.recipe h3{
+    font-size: 24px;
+    margin: 5px 0;
+    
+}
+.notfound{
+    font-size: 2em;
+    font-weight: bold;
+}
+.recipe span{
+    color:black;
+    font-weight: bold;
+}
+.recipe button{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg, #5900de 0%, #FC00FF 100%);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 18px auto;
+
+
+}
+.recipe button:hover{
+    background-image: linear-gradient(90deg, #FC00FF 0%, #5900de 100%);
+
+}
+.recipe-close-btn{
+    color: white;
+    background-color:#2f0478 ;
+    border: none;
+    width: 10%;
+    height: 8%;
+    padding: 0;
+    right: 20px;
+    top: 20px;
+    position: absolute;
+}
+.recipe-detailes {
+    padding: 30px;
+    color: white;
+    font-size: 12px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    border-radius: 12px;
+    width: 60%;
+    height: 40%;
+    transition: all 0.5s ease-in-out;
+    overflow: scroll;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #4304a0 0%, #760478 100%);
+    
+}
+.recipename{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+}
+.recipeinstruction li{
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
